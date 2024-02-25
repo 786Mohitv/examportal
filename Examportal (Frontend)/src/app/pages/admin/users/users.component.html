@@ -1,0 +1,35 @@
+<mat-card class="abc">
+    <h1>All Users</h1>
+    <mat-list >
+      <mat-list-item *ngFor="let u of users">
+        <!-- <mat-icon mat-list-icon>user</mat-icon> -->
+        
+        <div mat-line><strong>User Name</strong> - {{ u.username }}</div>
+        <div mat-line><strong>Full Name</strong> - {{ u.firstName }} {{u.lastName}}</div>
+        <div mat-line><strong>Email</strong> - {{ u.email }}</div>
+        <div mat-line><strong>Phone</strong> - {{ u.phone }}</div>
+        <div mat-line><strong>Enabled</strong> - {{ u.enabled }}</div>
+        
+        <button
+        [routerLink]="'/admin/update-user/'+ u.username"
+        mat-flat-button
+        color="accent"
+        class="ml20"
+      >
+        Update
+      </button>
+      <button
+        mat-flat-button
+        color="warn"
+        class="ml10"
+        (click)="deleteUser(u.id)"
+      >
+        Delete
+      </button>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  
+    
+  </mat-card>
+  

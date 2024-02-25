@@ -1,0 +1,183 @@
+<!--
+          <mat-card>
+            
+  
+            
+  
+            <form *ngIf="user" (submit)="updateData()">
+              
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>User Name</mat-label>
+                <input
+                  required
+                  [(ngModel)]="user.username"
+                  name="username"
+                  matInput
+                  placeholder="Enter here"
+                />
+                <mat-hint>Username must be unique !!</mat-hint>
+              </mat-form-field>
+  
+              
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>User Password</mat-label>
+                <input
+                  required
+                  [(ngModel)]="user.password"
+                  name="password"
+                  type="password"
+                  matInput
+                  placeholder="Enter here"
+                />
+              </mat-form-field> 
+  
+              
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input
+                  required
+                  [(ngModel)]="user.firstName"
+                  name="firstName"
+                  matInput
+                  placeholder="Enter here"
+                />
+              </mat-form-field>
+  
+              
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input
+                  required
+                  [(ngModel)]="user.lastName"
+                  name="lastName"
+                  matInput
+                  placeholder="Enter here"
+                />
+              </mat-form-field>
+  
+              
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Email Address</mat-label>
+                <input
+                  required
+                  [(ngModel)]="user.email"
+                  name="email"
+                  type="email"
+                  matInput
+                  placeholder="Enter here"
+                />
+              </mat-form-field>
+  
+              
+              <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Phone Number</mat-label>
+                <input
+                  required
+                  [(ngModel)]="user.phone"
+                  name="phone"
+                  type="number"
+                  matInput
+                  placeholder="Enter here"
+                />
+              </mat-form-field>
+  
+              <div class="container text-center">
+                <button type="submit" mat-raised-button color="primary">
+                  Update
+                </button>
+                
+              </div>
+            </form>
+          </mat-card>
+-->
+
+<mat-card>
+<h1>Update User</h1>
+
+
+    <div class="bootstrap-wrapper">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+        <form *ngIf="user" (submit)="updateData()">
+            
+            <mat-form-field class="w100" appearance="outline">
+                <mat-label>User Name</mat-label>
+                <input
+                required
+                [(ngModel)]="user.username"
+                name="username"
+                matInput
+                placeholder="Enter here"
+                />
+                <mat-hint>Username must be unique !!</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input
+                required
+                [(ngModel)]="user.firstName"
+                name="firstName"
+                matInput
+                placeholder="Enter here"
+                />
+            </mat-form-field>
+
+            
+            <mat-form-field class="w100" appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input
+                required
+                [(ngModel)]="user.lastName"
+                name="lastName"
+                matInput
+                placeholder="Enter here"
+                />
+            </mat-form-field>
+
+            
+            <mat-form-field class="w100" appearance="outline">
+                <mat-label>Email Address</mat-label>
+                <input
+                required
+                [(ngModel)]="user.email"
+                name="email"
+                type="email"
+                matInput
+                placeholder="Enter here"
+                />
+            </mat-form-field>
+
+            
+            <mat-form-field class="w100" appearance="outline">
+                <mat-label>Phone Number</mat-label>
+                <input
+                required
+                [(ngModel)]="user.phone"
+                name="phone"
+                type="number"
+                matInput
+                placeholder="Enter here"
+                />
+            </mat-form-field>
+            <!-- <mat-form-field class="w100" appearance="outline">
+                <mat-label>Enabled</mat-label>
+                <input
+                required
+                [(ngModel)]="user.enabled"
+                name="enabled"
+                type="number"
+                matInput
+                placeholder="Enter here"
+                />
+            </mat-form-field> -->
+
+            <div class="container text-center mt15">
+            <button mat-raised-button color="accent">Update</button>
+            </div>
+        </form>
+        </div>
+    </div>
+    </div>
+
+</mat-card>
